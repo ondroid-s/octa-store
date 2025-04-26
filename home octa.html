@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Octa Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f2f3f5;
+      color: #000;
+    }
+    header {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 700;
+      padding: 20px 0;
+      background: #ffffff3d;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 15px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .carousel a {
+      flex: 0 0 auto;
+      scroll-snap-align: center;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .carousel img {
+      height: 160px;
+      width: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .description {
+      text-align: center;
+      padding: 0 20px 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    h2 {
+      margin: 20px 15px 10px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .apps-section {
+      padding: 0 15px;
+    }
+
+    .apps-row {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 10px 0;
+    }
+
+    .app-card {
+      min-width: 100px;
+      flex-shrink: 0;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .app-card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 16px;
+      margin-bottom: 6px;
+    }
+
+    .app-card span {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .app-info {
+      font-size: 11px;
+      color: #555;
+      margin-top: 3px;
+    }
+
+    .more-link {
+      text-align: center;
+      font-size: 14px;
+      margin: 10px 0 20px;
+    }
+
+    .more-link a {
+      text-decoration: none;
+      color: #007aff;
+      font-weight: 500;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffffff3d;
+      backdrop-filter: blur(10px);
+      border-radius: 40px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      width: 90%;
+      max-width: 320px;
+      z-index: 1000;
+    }
+
+    .bottom-nav a {
+      text-align: center;
+      text-decoration: none;
+      color: #007aff;
+      font-size: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .bottom-nav img {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .bottom-nav a.clicked {
+      animation: bounce 0.4s ease;
+    }
+
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      30%  { transform: translateY(-6px); }
+      60%  { transform: translateY(2px); }
+      100% { transform: translateY(0); }
+    }
+
+    a.app-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin: 50px 0 80px;
+    }
+
+    ::-webkit-scrollbar {
+      height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>Octa Store</header>
+
+  <!-- Carrusel -->
+  <div class="carousel">
+    <a href="https://promo1.com"><img src="https://mundoperfecto.net/wp-content/uploads/2020/01/Roblox-Portada.jpg"></a>
+    <a href="https://promo2.com"><img src="https://mundoperfecto.net/wp-content/uploads/2019/08/Free-Fire-2024-Portada.jpg"></a>
+    <a href="https://promo3.com"><img src="https://mundoperfecto.net/wp-content/uploads/2019/10/Minecraft-Portada.jpg"></a>
+  </div>
+
+  <!-- Descripción -->
+  <div class="description">
+    Descubre las mejores aplicaciones y juegos en Octa Store. Explora contenido exclusivo, novedades semanales y herramientas que harán tu vida más divertida y productiva.
+  </div>
+
+  <!-- Secciones de apps -->
+  <div class="apps-section">
+    <h2>Para ti</h2>
+    <div class="apps-row">
+      <a href="go:app1" class="app-link"><div class="app-card"><img src="https://i0.wp.com/apkgstore.com/wp-content/uploads/2025/03/subway-surfers.png?resize=150%2C150&ssl=1"><span>Subway Surfers</span><div class="app-info">★4.3</div></div></a>
+      <a href="go:app2" class="app-link"><div class="app-card"><img src="https://i0.wp.com/apkgstore.com/wp-content/uploads/2025/02/gta-vice-city-definitive.png?resize=150%2C150&ssl=1"><span>Vice City</span><div class="app-info">★4.5</div></div></a>
+      <a href="go:app3" class="app-link"><div class="app-card"><img src="https://i0.wp.com/apkgstore.com/wp-content/uploads/2025/03/editor-de-video-ia-vidma-cut.png?resize=150%2C150&ssl=1"><span>Vidma cut</span><div class="app-info">★4.2</div></div></a>
+      <a href="go:app4" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/mZ6pRo5-NnrO9GMwFNrK5kShF0UrN5UOARVAw64_5aFG6NgEHSlq-BX5I8TEXtTOk9s=s180-rw"><span>Amazon Prime Video </span><div class="app-info">★4.6</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://i0.wp.com/apkgstore.com/wp-content/uploads/2025/04/lector-pdf-abrir-pdf-archivos.png?resize=128%2C128&ssl=1"><span>Lector PDF</span><div class="app-info">★4.1</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://i0.wp.com/apkgstore.com/wp-content/uploads/2024/09/crear-carteles-de-publicidad.png?resize=128%2C128&ssl=1"><span>Creador de carteles</span><div class="app-info">★4.7</div></div></a>
+    </div>
+    <div class="more-link"><a href="https://masparati.com">+ Ver más</a></div>
+
+    <h2>Entretenimiento</h2>
+    <div class="apps-row">
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/7ynvVIRdhJNAngCg_GI7i8TtH8BqkJYmffeUHsG-mJOdzt1XLvGmbsKuc5Q1SInBjDKN=s180-rw"><span>Spotify</span><div class="app-info">★4.8</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc=s180-rw"><span>You Tube</span><div class="app-info">★4.0</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/isTAxqbHBW8S04AVv_aibE8FxQ6b0G8tUOChFRkVB-Dv092_l0J1pfBE42-20C05wYY=s180-rw"><span>Cinexplore</span><div class="app-info">★4.5</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/4xUYWX2Z6LhCeyxjxfPl4d9v8DNGXiXJvR4gHcgTR3YCVoarhhGdfroTp1QvYI8pIQ=s180-rw"><span>Web Video Cast</span><div class="app-info">★4.4</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/T2YdtJJZ99-AQeqFpe747akm7FnSx0YLwut3HSTeT7fiQjE2QtM_W_O5oQ8Nnm3Sw-gt=s180-rw"><span>Mangatoon</span><div class="app-info">★4.9</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/QRqUEolMXUos-jh3cGuWurkeb6AQk4qs9-ePIFQ8itiBfGm8qwFONJUHrricfJ0u5Q=s180-rw"><span>Akinator VIP</span><div class="app-info">★4.6</div></div></a>
+    </div>
+    <div class="more-link"><a href="https://entretenimiento.com">+ Ver más</a></div>
+
+    <h2>Productividad</h2>
+    <div class="apps-row">
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/Kf8WTct65hFJxBUDm5E-EpYsiDoLQiGGbnuyP6HBNax43YShXti9THPon1YKB6zPYpA=s180-rw"><span>Google maps</span><div class="app-info">★4.5</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/ZYKTGrS5CresqrZJb-ewGyIHY2bA6dOKrTJqMAb6n4HXVQY4S9tOfhg0aiY8JH5zxg=s180-rw"><span>Duolingo</span><div class="app-info">★4.4</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/oWttohYyh3AtI6jYeQNQReUzhz-babbXTHf9DDosjH-BnUC1eGgh16yxJoDrJm9xxr49=s180-rw"><span>PhotoRoom</span><div class="app-info">★4.3</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/iBYjvYuNq8BB7EEEHktPG1fpX9NiY7Jcyg1iRtQxO442r9CZ8H-X9cLkTjpbORwWDG9d=s180-rw"><span>TikTok</span><div class="app-info">★4.6</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://mundoperfecto.net/wp-content/uploads/2021/05/Snaptube.jpg"><span>Snaptube</span><div class="app-info">★4.2</div></div></a>
+      <a href="go:lite" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/Tll2LETWf7s67vK-OXqI3CbpwraoUK6tJH73z034zumyJa6CrWx1OTaYNQWj9jMKQUMU=s180-rw"><span>Lite</span><div class="app-info">★4.7</div></div></a>
+    </div>
+    <div class="more-link"><a href="https://productividad.com">+ Ver más</a></div>
+
+    <h2>Juegos</h2>
+    <div class="apps-row">
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/g07-UO0jBwTbqBKMhsEEmlDrOyWXethtf8SVW9pOEEgAErd7NdgBCGLzixZDxXA5998=s180-rw"><span>My talking tom 2</span><div class="app-info">★4.8</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/gU9NKwpgLDYA6LIYK4dnkAkVyqNHUfTIqklEiNuO4oZ2OCpWQhQdqhnDh8Yb9B8SWIM=s180-rw"><span>Candy Crush</span><div class="app-info">★4.5</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/kK4pl4mPCWb69mKutoxRGDMSRUvVrX9hk91zDOMZkX2r_jTKBZypSGKWPDsqQAzRNGg=s180-rw"><span>Cars Drift</span><div class="app-info">★4.3</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/O-MwgukFeOEg1uGrkGEP2r4wN_es3i51_aOzxHRWzgtggl-jRp9WZDzINuCH_GCVviM=s180-rw"><span>Stick vs Zombies</span><div class="app-info">★4.7</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/27O5tpaYE82W6m30rJ_MX3-UvshlDM6O8oXDxb6GseYW2T7P8UNT19727MGmz-0q3w=s180-rw"><span>Minecraft</span><div class="app-info">★4.4</div></div></a>
+      <a href="go:noapp" class="app-link"><div class="app-card"><img src="https://play-lh.googleusercontent.com/JzFSE6MI0F_5bWcyYLXma-BiCRfRrhh1Of1qZizM3DenOa8v_1mnNiO0BoOFOAIScDA=s180-rw"><span>Subway Surfers</span><div class="app-info">★4.6</div></div></a>
+    </div>
+    <div class="more-link"><a href="https://juegos.com">+ Ver más</a></div>
+  </div>
+
+  <!-- Menú inferior -->
+  <div class="bottom-nav">
+    <a href="go:home1"><img src="https://img.icons8.com/?size=100&id=86527&format=png&color=000000"><div>Inicio</div></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png"><div>Juegos</div></a>
+    <a href="go:id12"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png"><div>Post</div></a>
+    <a href="go:bus2"><img src="https://img.icons8.com/?size=100&id=123400&format=png&color=000000"><div>Buscar</div></a>
+    <a href="go:789"><img src="https://img.icons8.com/?size=100&id=2969&format=png&color=000000"><div>Ajustes</div></a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Octa Store. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    document.querySelectorAll('.bottom-nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        link.classList.remove('clicked');
+        void link.offsetWidth;
+        link.classList.add('clicked');
+      });
+    });
+  </script>
+</body>
+</html>
