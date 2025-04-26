@@ -1,1 +1,11 @@
-
+{
+    "carloseduardo": {
+        "nombre_apellido": "Carlos Eduardo Solorzano Torres",
+        "correo": "Carlosdoria079@gmail.com",
+        "telefono": "009987",
+        "pais": "Colombia",
+        "fecha_nacimiento": "2008-04-12",
+        "experiencia": "programador",
+        "contraseña": "$2b$12$Ehtz.bjpjzy1jWrszwkhRuKHMCVDcn7R7n1shs3RQf6R/cM/PSdx2"
+    }
+}
