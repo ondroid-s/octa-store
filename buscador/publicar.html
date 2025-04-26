@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Publicar App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Publicar Nueva App</h1>
+        <form action="apps.php" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre de la App" required><br>
+            <input type="text" name="paquete" placeholder="Paquete de la App" required><br>
+            <input type="text" name="creador" placeholder="Creador de la App" required><br>
+            <input type="text" name="categoria" placeholder="Categoría de la App" required><br>
+            <textarea name="descripcion" placeholder="Descripción" required></textarea><br>
+            <input type="url" name="url" placeholder="URL de la App" required><br>
+            <input type="url" name="icono" placeholder="Icono (URL de Imagen)" required><br>
+            <button type="submit">Publicar App</button>
+        </form>
+    </div>
+</body>
+</html>
